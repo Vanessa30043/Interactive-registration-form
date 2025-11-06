@@ -10,6 +10,8 @@
   <div class="container">
     <h1>Register</h1>
     <form id="registrationForm" novalidate>
+        <!--prevents the browser from showing its default pop-up validation UI on submit. This is intentional because the lab asks you to show custom messages next to inputs using JavaScript.-->
+
       <!-- USERNAME -->
       <div class="form-group">
         <label for="username">Username:</label>
@@ -23,6 +25,12 @@
         />
         <span class="error-message" id="usernameError"></span>
       </div>
+
+<!--required → tells the browser the field must be filled (basic HTML5 validation).
+
+minlength="3" → enforces a simple rule that usernames be at least 3 characters (useful for real-time checks).
+
+placeholder → gives a short hint so the user sees expected input format.-->
 
       <!-- EMAIL -->
       <div class="form-group">
@@ -53,6 +61,16 @@
         <span class="error-message" id="passwordError"></span>
       </div>
 
+<!--required → the user must supply a password.
+
+minlength="8" → enforces minimum length in HTML5.
+
+pattern="..." → adds a regular-expression rule that requires at least one lowercase letter, one uppercase letter, and one digit. This leverages the browser’s built-in pattern checking.
+
+placeholder → helps the user understand expected input.
+span: these are where we print our custom validation messages from JavaScript.
+novalidate on form → disables browser bubble messages, so you can show your own-->
+
       <!-- CONFIRM PASSWORD -->
       <div class="form-group">
         <label for="confirmPassword">Confirm Password:</label>
@@ -63,9 +81,12 @@
           required 
           placeholder="Re-enter your password"
         />
+
+        <!--→ "Required" : user must confirm the password.required ensures it’s not left blank.-->
+
         <span class="error-message" id="confirmPasswordError"></span>
       </div>
-
+    
       <button type="submit">Register</button>
     </form>
   </div>
