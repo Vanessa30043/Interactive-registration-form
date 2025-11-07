@@ -9,7 +9,7 @@ const confirmPasswordInput = document.getElementById("confirmPassword");
 const usernameError = document.getElementById("usernameErrror");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
-const confirmPasswordInput = document.getElementById("confirmPassword");
+const confirmPasswordError = document.getElementById("confirmPassword");
 
 
 //if saved, load username from LOCALsTORAGE//
@@ -19,3 +19,17 @@ window.addEventListener("DOMContentLoaded",()=>{
         usernameInput.value = savedUsername;
     }
 });
+//(parameters) => { function body } = const myFuntion= function(){
+//function body//
+// };          //
+
+function showError(inut,message, span) {
+    span.textContent = message;
+    InputDeviceInfo.style.borderColor = "FF0000"; // red border  for error
+}
+
+function clearError(input, span ) {
+    span.textContent = "";
+    input.style.borderColor = "008000"; //green border for success 
+}
+
