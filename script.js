@@ -1,7 +1,7 @@
 // Step 1: Select all the elements we need (DOM Selection)
 const form = document.getElementById("registrationForm");
 const usernameInput = document.getElementById("username");
-const emailInput = document.getelementbyId("email");
+const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 
@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded",()=>{
 //function body//
 // };          //
 
-function showError(inut,message, span) {
+function showError(input,message, span) {
     span.textContent = message;
     InputDeviceInfo.style.borderColor = "FF0000"; // red border  for error
 }
