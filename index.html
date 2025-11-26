@@ -10,9 +10,10 @@
   <div class="container">
     <h1>Register</h1>
     <form id="registrationForm" novalidate>
-        <!--prevents the browser from showing its default pop-up validation UI on submit. This is intentional because the lab asks you to show custom messages next to inputs using JavaScript.-->
 
-      <!-- USERNAME -->
+  <!--prevents the browser from showing its default pop-up validation UI on submit. This is intentional because the lab asks you to show custom messages next to inputs using JavaScript.-->
+
+  <!-- USERNAME -->
       <div class="form-group">
         <label for="username">Username:</label>
         <input 
@@ -32,7 +33,7 @@ minlength="3" → enforces a simple rule that usernames be at least 3 characters
 
 placeholder → gives a short hint so the user sees expected input format.-->
 
-      <!-- EMAIL -->
+ <!-- EMAIL -->
       <div class="form-group">
         <label for="email">Email:</label>
         <input 
@@ -82,7 +83,7 @@ novalidate on form → disables browser bubble messages, so you can show your ow
           placeholder="Re-enter your password"
         />
 
-        <!--→ "Required" : user must confirm the password.required ensures it’s not left blank.-->
+  <!--→ "Required" : user must confirm the password.required ensures it’s not left blank.-->
 
         <span class="error-message" id="confirmPasswordError"></span>
       </div>
